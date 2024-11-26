@@ -1,4 +1,5 @@
 import { router } from 'expo-router'
+import { StatusBar } from 'expo-status-bar'
 import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native'
 
 
@@ -28,6 +29,7 @@ const Login = () => {
         <Pressable onPress={handleLogin} style={styles.button}>
           <Text style={styles.textButton}>Entrar</Text>
         </Pressable>
+      <StatusBar style='auto'/>
     </View>
   )
 }

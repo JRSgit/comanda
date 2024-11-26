@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "scheme": "comander",
     "orientation": "portrait",
-    "icon": "./assets/jrs.png",
+    "icon": "./assets/logo.gif",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {

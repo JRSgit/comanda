@@ -1,25 +1,72 @@
-import { View, Text } from 'react-native'
+import '../styles/global.css'
+import { View, Text, Image, StyleSheet } from 'react-native'
 import React from 'react'
 import { Stack } from 'expo-router'
+import { StatusBar } from 'expo-status-bar'
 
-const _layout = () => {
+
+const img = require('../../assets/logoWhite.png')
+
+function LogoTitle() {
+  return (
+    <Image style={styles.image} source={img} />
+  )
+}
+
+export default function Layout() {
   return (
     <Stack>
       <Stack.Screen
-      name='index' options={{
-        headerTitle: "Login",
-        headerTintColor: "blue"
-      }}
-     />
-
-    <Stack.Screen
-        name='home' options={{
-            headerTitle: "Home",
-            headerTintColor: "blue"
+        name='index' options={{
+          headerTitle: "Login",
+          headerTintColor: "blue",
+          headerShown: false
         }}
-        />
+      />
+
+      <Stack.Screen
+        name='home' options={{
+          headerTitle: props => <LogoTitle {...props} />,
+          headerTintColor: "blue",
+
+        }}
+      />
+
+      <Stack.Screen
+        name='order/[id]' options={{
+          headerTitle: "Pedido",
+          headerTintColor: "blue",
+          // headerShown: false
+        }}
+      />
+
+      <Stack.Screen
+        name='cadastro/index' options={{
+          headerTitle: "Cadastro",
+          headerTintColor: "blue",
+          headerShown: false
+        }}
+      />
+
+      <Stack.Screen
+        name='modal' options={{
+          presentation: 'modal',
+        }}
+      />
+
+      <StatusBar style='auto' />
     </Stack>
   )
 }
 
-export default _layout
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  image: {
+    width: 50,
+    height: 50,
+  },
+});

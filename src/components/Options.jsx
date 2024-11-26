@@ -1,11 +1,11 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Pressable } from 'react-native';
 
-export  function Options({title, cor = "#999"}) {
- return (
-   <View style={[styles.container, { backgroundColor: cor}]}>
-    <Text style={styles.title}>{title}</Text>
-   </View>
-  );
+export function Options({ title, func = '', cor = "#999" }) {
+    return (
+        <Pressable style={[styles.container, { backgroundColor: cor }]} onPress={func}>
+            <Text style={styles.title}>{title}</Text>
+        </Pressable>
+    );
 }
 
 const styles = StyleSheet.create({
