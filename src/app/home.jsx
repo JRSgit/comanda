@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import { View, Text, StyleSheet, Image, ScrollView, Pressable } from 'react-native'
 import { format } from 'date-fns'
+=======
+import { View, Text, StyleSheet, Image, ScrollView } from 'react-native'
+import React from 'react'
+>>>>>>> 87629254baf30dde2b8276eb33a5047d2363ecc6
 import { Link, router } from 'expo-router'
 
 import { Options } from '../components/Options'
@@ -12,6 +17,7 @@ import { StatusBar } from 'expo-status-bar'
 
 const Layout = () => {
 
+<<<<<<< HEAD
   const date = format(new Date(), "dd/MM/yyyy")
 
   const handleCliclHome = () => {
@@ -19,6 +25,8 @@ const Layout = () => {
   }
 
 
+=======
+>>>>>>> 87629254baf30dde2b8276eb33a5047d2363ecc6
   const handleCliclTable = (id) => {
     // alert("Mesa " + id)
     router.push(`order/${id}`)
@@ -33,8 +41,13 @@ const Layout = () => {
         <Text style={styles.textTitle}>Home</Text>
       </View>
       <View style={styles.information}>
+<<<<<<< HEAD
         <Text className="text-lg">Maria José</Text>
         <Text>{date}</Text>
+=======
+        <Text>Maria José</Text>
+        <Text>25/11/24</Text>
+>>>>>>> 87629254baf30dde2b8276eb33a5047d2363ecc6
       </View>
 
       <View style={{ paddingHorizontal: 10 }}>
@@ -47,6 +60,7 @@ const Layout = () => {
         </View>
 
       </View>
+<<<<<<< HEAD
 
       <View className="w-full flex-row items-center justify-center mb-10">
         <Pressable
@@ -57,6 +71,9 @@ const Layout = () => {
 
       </View>
       <StatusBar style='auto' />
+=======
+    <StatusBar style='auto' />
+>>>>>>> 87629254baf30dde2b8276eb33a5047d2363ecc6
     </ScrollView>
   )
 }

@@ -13,7 +13,11 @@ function LogoTitle() {
   )
 }
 
+<<<<<<< HEAD
 export default function Layout() {
+=======
+export default function  Layout  () {
+>>>>>>> 87629254baf30dde2b8276eb33a5047d2363ecc6
   return (
     <Stack>
       <Stack.Screen
@@ -28,6 +32,7 @@ export default function Layout() {
         name='home' options={{
           headerTitle: props => <LogoTitle {...props} />,
           headerTintColor: "blue",
+<<<<<<< HEAD
 
         }}
       />
@@ -54,6 +59,19 @@ export default function Layout() {
         }}
       />
 
+=======
+        
+        }}
+      />
+
+      <Stack.Screen
+        name='order/[id]' options={{
+          headerTitle: "Pedido",
+          headerTintColor: "blue",
+          // headerShown: false
+        }}
+      />
+>>>>>>> 87629254baf30dde2b8276eb33a5047d2363ecc6
       <StatusBar style='auto' />
     </Stack>
   )
